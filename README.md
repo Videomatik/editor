@@ -49,6 +49,28 @@ clipper.on('change', ({ clips }) => {
 })
 ```
 
+## Developing
+
+To develop and test this library, you can run:
+
+```bash
+npm run dev
+```
+
+This will setup building, auto-rebuilding the library once you any code is changed
+
+```bash
+npm run server
+```
+
+This will run a server and display the project at: `http://localhost:8080`
+
+If you wish to test the library, refer to the `index.html` page and change it
+to what you want to test.
+
+You can use `__editorURL` special parameter to change the intended editor
+iframe URL to the one on your dev server
+
 # Support
 
 Please read the API documentation available on [Videomatik's website](https://videomatik.com.br) or contact the developers through our Discord server (invite link available at our website).
