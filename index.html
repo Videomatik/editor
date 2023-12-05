@@ -3,25 +3,52 @@
 
 <!DOCTYPE html>
 <html>
-  <div id="clipper" style="height: 920px; width: 920px"></div>
-  <script src="./dist/editor.js"></script>
-  <script>
-    const clipper = new VideomatikEditor.Clipper("#clipper", {
-      __editorURL: 'http://localhost:3000',
-      video: 'https://storage.videomatik.com.br/videomatik-sheet/a426c1ce128.mp4',
-      clips: [
-        {start: 10, end: 20, selected: true},
-        {start: 40, end: 60, selected: false},
-        {start: 80, end: 120, selected: true},
-      ],
-    })
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        background: #333;
+      }
 
-    clipper.on('ready', () => {
-      console.log('The player was successfully mounted and finished loading')
-    })
+      .clipper-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column
+      }
 
-    clipper.on('change', ({ clips }) => {
-      console.log('User has changed the clips to:', clips)
-    })
-  </script>
+      button {
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clipper-container">
+      <div id="clipper" style="height: 70vh; width: 100%"></div>
+      <button type="button" onclick="console.log(savedClips)">
+        Export
+      </button>
+    </div>
+    <script src="./dist/editor.js"></script>
+    <script>
+      let savedClips = [
+        {start: 1300, end: 1380, selected: true},
+      ]
+
+      const clipper = new VideomatikEditor.Clipper("#clipper", {
+        // __editorURL: 'http://localhost:3000',
+        video: 'https://demo2200.s3.sa-east-1.amazonaws.com/11_20_2023_14_44_20_107605-3.mp4',
+        clips: savedClips,
+      })
+
+      clipper.on('ready', () => {
+        console.log('The player was successfully mounted and finished loading')
+      })
+
+      clipper.on('change', ({ clips }) => {
+        console.log('User has changed the clips to:', clips)
+        savedClips = clips
+      })
+    </script>
+  </body>
 </html>

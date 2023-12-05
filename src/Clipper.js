@@ -14,6 +14,7 @@ class VideomatikClipper {
     iframe.height = '100%';
     iframe.scrolling = 'no';
     iframe.style.border = 'none';
+    iframe.allowFullScreen = true;
 
     const urlParams = new URLSearchParams({
       video,
@@ -45,7 +46,7 @@ class VideomatikClipper {
         this.eventEmitter.emit('ready', data.payload);
         break;
 
-      case 'change':
+      case 'clip-changed':
         this.eventEmitter.emit('change', data.payload);
         break;
     }
