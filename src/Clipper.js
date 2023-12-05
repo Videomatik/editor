@@ -23,7 +23,7 @@ class VideomatikClipper {
 
     container.appendChild(iframe);
 
-    this.editorURL = __editorURL;
+    this.editorURL = new URL(__editorURL);
     this.iframe = iframe;
     this.video = video;
     this.clips = clips;
@@ -35,6 +35,10 @@ class VideomatikClipper {
 
   onMessage = (event) => {
     const { data } = event;
+    if (event.origin !== this.editorURL.origin) {
+      return;
+    }
+
     // eslint-disable-next-line default-case
     switch (data.action) {
       case 'ready':
