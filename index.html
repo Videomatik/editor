@@ -1,0 +1,26 @@
+<!-- For tests only, run "http-server" on the terminal -->
+<!-- An example of the use of Videomatik Player -->
+
+<!DOCTYPE html>
+<html>
+  <div id="clipper" style="height: 920px; width: 920px"></div>
+  <script src="./dist/editor.js"></script>
+  <script>
+    const clipper = new VideomatikEditor.Clipper("#clipper", {
+      video: 'https://storage.videomatik.com.br/videomatik-sheet/a426c1ce128.mp4',
+      clips: [
+        {start: 10, end: 20, selected: true},
+        {start: 40, end: 60, selected: false},
+        {start: 80, end: 120, selected: true},
+      ],
+    })
+
+    clipper.on('ready', () => {
+      console.log('The player was successfully mounted and finished loading')
+    })
+
+    clipper.on('change', ({ clips }) => {
+      console.log('User has changed the clips to:', clips)
+    })
+  </script>
+</html>
