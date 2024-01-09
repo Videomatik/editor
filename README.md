@@ -103,7 +103,7 @@ This will setup building, auto-rebuilding the library once you any code is chang
 npm run server
 ```
 
-This will run a server and display the project at: `http://localhost:8080`
+This will run a server and display the project at: `http://localhost:8080/demos/`
 
 If you wish to test the library, refer to the `index.html` page and change it
 to what you want to test.

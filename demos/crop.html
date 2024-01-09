@@ -1,0 +1,359 @@
+<!-- For tests only, run "http-server" on the terminal -->
+<!-- An example of the use of Videomatik Player -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        background: #333;
+      }
+
+      .cropper-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column
+      }
+
+      button {
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cropper-container">
+      <div id="cropper" style="height: 70vh; width: 100%"></div>
+      <button type="button" onclick="console.log(savedCrops)">
+        Export
+      </button>
+    </div>
+    <script src="dist/editor.js"></script>
+    <script>
+      let savedCrops = [
+         {
+          "end": 2.402,
+          "start": 0,
+          "cropCenter": {
+            "x": 988.3558559417725,
+            "y": 540,
+            "width": 147.9422950744629
+          }
+        },
+        {
+          "end": 3.871,
+          "start": 2.402,
+          "cropCenter": {
+            "x": 908.6217212677002,
+            "y": 540,
+            "width": 1142.2939109802246
+          }
+        },
+        {
+          "end": 4.638,
+          "start": 3.871,
+          "cropCenter": {
+            "x": 1251.1935424804688,
+            "y": 540,
+            "width": 673.3168029785156
+          }
+        },
+        {
+          "end": 5.539,
+          "start": 4.638,
+          "cropCenter": {
+            "x": 980.9770202636719,
+            "y": 540,
+            "width": 798.6653137207031
+          }
+        },
+        {
+          "end": 8.175,
+          "start": 5.539,
+          "cropCenter": {
+            "x": 932.4140739440918,
+            "y": 540,
+            "width": 117.69824981689453
+          }
+        },
+        {
+          "end": 9.343,
+          "start": 8.175,
+          "cropCenter": {
+            "x": 1215.9786987304688,
+            "y": 540,
+            "width": 290.804443359375
+          }
+        },
+        {
+          "end": 12.613,
+          "start": 9.343,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 14.248,
+          "start": 12.613,
+          "cropCenter": {
+            "x": 549.7299957275391,
+            "y": 540,
+            "width": 64.12033081054688
+          }
+        },
+        {
+          "end": 14.915,
+          "start": 14.248,
+          "cropCenter": {
+            "x": 857.3641204833984,
+            "y": 540,
+            "width": 1714.7282409667969
+          }
+        },
+        {
+          "end": 15.616,
+          "start": 14.915,
+          "cropCenter": {
+            "x": 854.5224380493164,
+            "y": 540,
+            "width": 1361.7631530761719
+          }
+        },
+        {
+          "end": 16.25,
+          "start": 15.616,
+          "cropCenter": {
+            "x": 932.4861145019531,
+            "y": 540,
+            "width": 621.2246704101562
+          }
+        },
+        {
+          "end": 16.85,
+          "start": 16.25,
+          "cropCenter": {
+            "x": 917.1447944641113,
+            "y": 540,
+            "width": 530.9460067749023
+          }
+        },
+        {
+          "end": 20.754,
+          "start": 16.85,
+          "cropCenter": {
+            "x": 833.2143974304199,
+            "y": 540,
+            "width": 74.91325378417969
+          }
+        },
+        {
+          "end": 25.225,
+          "start": 20.754,
+          "cropCenter": {
+            "x": 664.9963760375977,
+            "y": 540,
+            "width": 44.26849365234375
+          }
+        },
+        {
+          "end": 28.495,
+          "start": 25.225,
+          "cropCenter": {
+            "x": 609.3685913085938,
+            "y": 540,
+            "width": 54.00432586669922
+          }
+        },
+        {
+          "end": 29.496,
+          "start": 28.495,
+          "cropCenter": {
+            "x": 827.0823669433594,
+            "y": 540,
+            "width": 178.45928192138672
+          }
+        },
+        {
+          "end": 30.297,
+          "start": 29.496,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 30.965,
+          "start": 30.297,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 31.665,
+          "start": 30.965,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 32.9,
+          "start": 31.665,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 34.001,
+          "start": 32.9,
+          "cropCenter": {
+            "x": 791.5688323974609,
+            "y": 540,
+            "width": 34.183502197265625
+          }
+        },
+        {
+          "end": 35.302,
+          "start": 34.001,
+          "cropCenter": {
+            "x": 289.43458557128906,
+            "y": 540,
+            "width": 61.615047454833984
+          }
+        },
+        {
+          "end": 37.304,
+          "start": 35.302,
+          "cropCenter": {
+            "x": 1403.474464416504,
+            "y": 540,
+            "width": 45.31654357910156
+          }
+        },
+        {
+          "end": 40.307,
+          "start": 37.304,
+          "cropCenter": {
+            "x": 920.1544761657715,
+            "y": 540,
+            "width": 62.802085876464844
+          }
+        },
+        {
+          "end": 43.244,
+          "start": 40.307,
+          "cropCenter": {
+            "x": 956.9869422912598,
+            "y": 540,
+            "width": 53.49254608154297
+          }
+        },
+        {
+          "end": 48.883,
+          "start": 43.244,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 50.551,
+          "start": 48.883,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 52.186,
+          "start": 50.551,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 53.821,
+          "start": 52.186,
+          "cropCenter": {
+            "x": 1054.0718078613281,
+            "y": 540,
+            "width": 109.31533813476562
+          }
+        },
+        {
+          "end": 55.823,
+          "start": 53.821,
+          "cropCenter": {
+            "x": 960,
+            "y": 540,
+            "width": 0
+          }
+        },
+        {
+          "end": 56.524,
+          "start": 55.823,
+          "cropCenter": {
+            "x": 982.4769973754883,
+            "y": 540,
+            "width": 32.931060791015625
+          }
+        },
+        {
+          "end": 57.959,
+          "start": 56.524,
+          "cropCenter": {
+            "x": 613.502368927002,
+            "y": 540,
+            "width": 117.61871337890625
+          }
+        },
+        {
+          "end": 59.093,
+          "start": 57.959,
+          "cropCenter": {
+            "x": 864.752025604248,
+            "y": 540,
+            "width": 128.05068969726562
+          }
+        },
+        {
+          "end": 60.027,
+          "start": 59.093,
+          "cropCenter": {
+            "x": 1294.6980285644531,
+            "y": 540,
+            "width": 102.49465942382812
+          }
+        }
+      ]
+
+      const cropper = new VideomatikEditor.Clipper("#cropper", {
+        // __editorURL: 'http://localhost:3000',
+        video: 'https://storage.videomatik.com.br/videomatik-sheet/6601f59e3ac.mp4',
+        crops: savedCrops,
+      })
+
+      cropper.on('ready', ({ crops }) => {
+        console.log('The player was successfully mounted and finished loading')
+      })
+
+      cropper.on('change', ({ crops }) => {
+        console.log('User has changed the crops to:', crops)
+        savedCrops = crops
+      })
+    </script>
+  </body>
+</html>
