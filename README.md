@@ -9,7 +9,9 @@ operations for videomatik through a video editor.
 npm install --save @videomatik/editor
 ```
 
-## Usage (Clipper)
+# Clipper
+
+## Usage
 
 Considering you have the follow div on your HTML:
 
@@ -22,7 +24,7 @@ You can create a video clipper using the following code:
 ```javascript
 import { Clipper } from '@videomatik/editor'
 
-const clipper = new VideomatikEditor('#video-clipper', {
+const clipper = new Clipper('#video-clipper', {
   video: 'https://storage.videomatik.com.br/videomatik-sheet/a426c1ce128.mp4',
   clips: [
     {start: 10, end: 20, selected: true},
@@ -46,6 +48,44 @@ clipper.on('ready', () => {
 
 clipper.on('change', ({ clips }) => {
   console.log('User has changed the clips to:', clips)
+})
+```
+
+# Cropper
+
+## Usage
+
+Considering you have the follow div on your HTML:
+
+```html
+<div id="video-cropper"></div>
+```
+
+You can create a video cropper using the following code:
+
+```javascript
+import { Cropper } from '@videomatik/editor'
+
+const cropper = new Cropper('#video-cropper', {
+  video: 'https://storage.videomatik.com.br/videomatik-sheet/a426c1ce128.mp4',
+  crops: [],
+})
+```
+
+This will create a new video cropper using the preset video and clips in the timeline
+
+## Events
+
+You can listen to events and check when the editor's state was updated with the
+following methods:
+
+```javascript
+cropper.on('ready', ({ crops }) => {
+  console.log('The player was successfully mounted and finished loading, the default crops are:', crops)
+})
+
+cropper.on('change', ({ crops }) => {
+  console.log('User has changed the crops to:', crops)
 })
 ```
 
