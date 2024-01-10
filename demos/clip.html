@@ -29,15 +29,15 @@
         Export
       </button>
     </div>
-    <script src="./dist/editor.js"></script>
+    <script src="/dist/editor.js"></script>
     <script>
       let savedClips = [
-        {start: 1300, end: 1380, selected: true},
+        {start: 0, end: 60, selected: true},
       ]
 
       const clipper = new VideomatikEditor.Clipper("#clipper", {
         // __editorURL: 'http://localhost:3000',
-        video: 'https://demo2200.s3.sa-east-1.amazonaws.com/11_20_2023_14_44_20_107605-3.mp4',
+        video: 'https://storage.videomatik.com.br/videomatik-sheet/26601f59e3a.mp4',
         clips: savedClips,
       })
 
