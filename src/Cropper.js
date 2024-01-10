@@ -29,7 +29,7 @@ class VideomatikCropper {
     this.iframe = iframe;
     this.video = video;
     this.crops = crops;
-    this.aspectRatio = aspectRatio
+    this.aspectRatio = aspectRatio;
 
     this.eventEmitter = new EventEmitter();
 
