@@ -18,9 +18,8 @@ class VideomatikCropper {
 
     const urlParams = new URLSearchParams({
       video,
-      crops: JSON.stringify(crops),
     });
-    iframe.setAttribute('src', `${__editorURL}/clipper/embed?${urlParams.toString()}`);
+    iframe.setAttribute('src', `${__editorURL}/cropper/embed?${urlParams.toString()}`);
 
     container.appendChild(iframe);
 
@@ -42,11 +41,30 @@ class VideomatikCropper {
 
     // eslint-disable-next-line default-case
     switch (data.action) {
+      case 'mounted':
+        if (!this.crops || !this.crops?.length) {
+          // Auto Detect Crops
+          this.iframe.contentWindow.postMessage({
+            action: 'crops-detect',
+            payload: {},
+          }, '*');
+          return;
+        }
+
+        // Preset Crops
+        this.iframe.contentWindow.postMessage({
+          action: 'crops-set',
+          payload: {
+            crops: this.crops,
+          },
+        }, '*');
+        break;
+
       case 'ready':
         this.eventEmitter.emit('ready', data.payload);
         break;
 
-      case 'clip-changed':
+      case 'crop-changed':
         this.eventEmitter.emit('change', data.payload);
         break;
     }
