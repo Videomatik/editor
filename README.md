@@ -68,6 +68,7 @@ import { Cropper } from '@videomatik/editor'
 
 const cropper = new Cropper('#video-cropper', {
   video: 'https://storage.videomatik.com.br/videomatik-sheet/a426c1ce128.mp4',
+  // Optional
   crops: [],
 })
 ```
@@ -86,6 +87,81 @@ cropper.on('ready', ({ crops }) => {
 
 cropper.on('change', ({ crops }) => {
   console.log('User has changed the crops to:', crops)
+})
+```
+
+# Subtitle
+
+## Usage
+
+Considering you have the follow div on your HTML:
+
+```html
+<div id="video-subtitle"></div>
+```
+
+You can create a subtitle editor using the following code:
+
+```javascript
+import { Subtitle } from '@videomatik/editor'
+
+const subtitle = new Subtitle('#video-Subtitle', {
+  video: 'https://storage.videomatik.com.br/videomatik-sheet/a426c1ce128.mp4',
+  subtitles: {
+    // Optional
+    style: {
+      "MarginV": 324,
+      "Outline": 6.9,
+      "Fontname": "Poppins Bold",
+    },
+    // Optional
+    transcription: [
+      {
+        "end": 1.411,
+        "start": 0.189,
+        "words": [
+          {
+            "end": 0.93,
+            "word": "Gente,",
+            "index": 0,
+            "score": 0.751,
+            "start": 0.189,
+            "endTime": "00:00:00,930",
+            "startTime": "00:00:00,189"
+          },
+          {
+            "end": 1.411,
+            "word": "ciúme",
+            "index": 1,
+            "score": 0.685,
+            "start": 1.01,
+            "endTime": "00:00:01,411",
+            "startTime": "00:00:01,010"
+          }
+        ],
+        "length": 11,
+        "endTime": "00:00:01,411",
+        "startTime": "00:00:00,189"
+      },
+    ]
+  },
+})
+```
+
+This will create a new subtitle editor using the preset video and subtitle transcription
+
+## Events
+
+You can listen to events and check when the editor's state was updated with the
+following methods:
+
+```javascript
+subtitles.on('ready', ( subtitles ) => {
+  console.log('The player was successfully mounted and finished loading, the default subtitles are:', subtitles)
+})
+
+subtitles.on('change', ( subtitles ) => {
+  console.log('User has changed the subtitles to:', subtitles)
 })
 ```
 
