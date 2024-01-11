@@ -1,0 +1,1410 @@
+<!-- For tests only, run "http-server" on the terminal -->
+<!-- An example of the use of Videomatik Player -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        background: #333;
+      }
+
+      .subtitle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column
+      }
+
+      button {
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="subtitle-container">
+      <div id="subtitle" style="height: 70vh; width: 100%"></div>
+      <button type="button" onclick="console.log(savedSubtitles)">
+        Export
+      </button>
+    </div>
+    <script src="/dist/editor.js"></script>
+    <script>
+      let savedSubtitles = {
+    style: {
+      "MarginV": 324,
+      "Outline": 6.9,
+      "maxTime": 1,
+      "Fontname": "Poppins Bold",
+      "Fontsize": 67.5,
+      "maxWords": 4,
+      "videoWidth": 608,
+      "BorderStyle": 1,
+      "videoHeight": 1080,
+      "OutlineColour": "#000000",
+      "PrimaryColour": "#ffffff",
+      "maxCharacters": 30,
+      "highlightStyle": "{\\c&H005f0bde&}",
+      "HighlightFontColor": "#de0b5f"
+    },
+    transcription: [
+      {
+        "end": 1.411,
+        "start": 0.189,
+        "words": [
+          {
+            "end": 0.93,
+            "word": "Gente,",
+            "index": 0,
+            "score": 0.751,
+            "start": 0.189,
+            "endTime": "00:00:00,930",
+            "startTime": "00:00:00,189"
+          },
+          {
+            "end": 1.411,
+            "word": "ciúme",
+            "index": 1,
+            "score": 0.685,
+            "start": 1.01,
+            "endTime": "00:00:01,411",
+            "startTime": "00:00:01,010"
+          }
+        ],
+        "length": 11,
+        "endTime": "00:00:01,411",
+        "startTime": "00:00:00,189"
+      },
+      {
+        "end": 2.973,
+        "start": 1.691,
+        "words": [
+          {
+            "end": 2.192,
+            "word": "normalmente",
+            "index": 2,
+            "score": 0.851,
+            "start": 1.691,
+            "endTime": "00:00:02,192",
+            "startTime": "00:00:01,691"
+          },
+          {
+            "end": 2.372,
+            "word": "tem",
+            "index": 3,
+            "score": 0.803,
+            "start": 2.252,
+            "endTime": "00:00:02,372",
+            "startTime": "00:00:02,252"
+          },
+          {
+            "end": 2.973,
+            "word": "relação",
+            "index": 4,
+            "score": 0.833,
+            "start": 2.412,
+            "endTime": "00:00:02,973",
+            "startTime": "00:00:02,412"
+          }
+        ],
+        "length": 21,
+        "endTime": "00:00:02,973",
+        "startTime": "00:00:01,691"
+      },
+      {
+        "end": 3.994,
+        "start": 3.073,
+        "words": [
+          {
+            "end": 3.213,
+            "word": "com",
+            "index": 5,
+            "score": 0.971,
+            "start": 3.073,
+            "endTime": "00:00:03,213",
+            "startTime": "00:00:03,073"
+          },
+          {
+            "end": 3.994,
+            "word": "posse.",
+            "index": 6,
+            "score": 0.932,
+            "start": 3.473,
+            "endTime": "00:00:03,994",
+            "startTime": "00:00:03,473"
+          }
+        ],
+        "endTime": "00:00:03,994",
+        "startTime": "00:00:03,073"
+      },
+      {
+        "end": 6.096,
+        "start": 4.354,
+        "words": [
+          {
+            "end": 4.515,
+            "word": "Eu",
+            "index": 7,
+            "score": 0.415,
+            "start": 4.354,
+            "endTime": "00:00:04,515",
+            "startTime": "00:00:04,354"
+          },
+          {
+            "end": 5.155,
+            "word": "tenho",
+            "index": 8,
+            "score": 0.72,
+            "start": 4.955,
+            "endTime": "00:00:05,155",
+            "startTime": "00:00:04,955"
+          },
+          {
+            "end": 5.816,
+            "word": "ciúme",
+            "index": 9,
+            "score": 0.696,
+            "start": 5.316,
+            "endTime": "00:00:05,816",
+            "startTime": "00:00:05,316"
+          },
+          {
+            "end": 5.936,
+            "word": "do",
+            "index": 10,
+            "score": 0.819,
+            "start": 5.856,
+            "endTime": "00:00:05,936",
+            "startTime": "00:00:05,856"
+          },
+          {
+            "end": 6.096,
+            "word": "que",
+            "index": 11,
+            "score": 0.848,
+            "start": 5.996,
+            "endTime": "00:00:06,096",
+            "startTime": "00:00:05,996"
+          }
+        ],
+        "endTime": "00:00:06,096",
+        "startTime": "00:00:04,354"
+      },
+      {
+        "end": 6.537,
+        "start": 6.137,
+        "words": [
+          {
+            "end": 6.177,
+            "word": "é",
+            "index": 12,
+            "score": 0.243,
+            "start": 6.137,
+            "endTime": "00:00:06,177",
+            "startTime": "00:00:06,137"
+          },
+          {
+            "end": 6.537,
+            "word": "meu.",
+            "index": 13,
+            "score": 0.956,
+            "start": 6.257,
+            "endTime": "00:00:06,537",
+            "startTime": "00:00:06,257"
+          }
+        ],
+        "endTime": "00:00:06,537",
+        "startTime": "00:00:06,137"
+      },
+      {
+        "end": 8.319,
+        "start": 7.398,
+        "words": [
+          {
+            "end": 7.438,
+            "word": "UE",
+            "index": 14,
+            "score": 1,
+            "start": 7.398,
+            "endTime": "00:00:07,438",
+            "startTime": "00:00:07,398"
+          },
+          {
+            "end": 7.658,
+            "word": "tenho",
+            "index": 15,
+            "score": 0.758,
+            "start": 7.478,
+            "endTime": "00:00:07,658",
+            "startTime": "00:00:07,478"
+          },
+          {
+            "end": 8.099,
+            "word": "ciúme",
+            "index": 16,
+            "score": 0.608,
+            "start": 7.759,
+            "endTime": "00:00:08,099",
+            "startTime": "00:00:07,759"
+          },
+          {
+            "end": 8.179,
+            "word": "do",
+            "index": 17,
+            "score": 0.869,
+            "start": 8.119,
+            "endTime": "00:00:08,179",
+            "startTime": "00:00:08,119"
+          },
+          {
+            "end": 8.319,
+            "word": "que",
+            "index": 18,
+            "score": 0.821,
+            "start": 8.239,
+            "endTime": "00:00:08,319",
+            "startTime": "00:00:08,239"
+          }
+        ],
+        "endTime": "00:00:08,319",
+        "startTime": "00:00:07,398"
+      },
+      {
+        "end": 9.441,
+        "start": 8.339,
+        "words": [
+          {
+            "end": 8.379,
+            "word": "eu",
+            "index": 19,
+            "score": 0.996,
+            "start": 8.339,
+            "endTime": "00:00:08,379",
+            "startTime": "00:00:08,339"
+          },
+          {
+            "end": 8.64,
+            "word": "quero",
+            "index": 20,
+            "score": 0.704,
+            "start": 8.419,
+            "endTime": "00:00:08,640",
+            "startTime": "00:00:08,419"
+          },
+          {
+            "end": 9.441,
+            "word": "proteger.",
+            "index": 21,
+            "score": 0.931,
+            "start": 8.76,
+            "endTime": "00:00:09,441",
+            "startTime": "00:00:08,760"
+          }
+        ],
+        "length": 16,
+        "endTime": "00:00:09,441",
+        "startTime": "00:00:08,339"
+      },
+      {
+        "end": 10.962,
+        "start": 9.521,
+        "words": [
+          {
+            "end": 9.821,
+            "word": "Eu",
+            "index": 22,
+            "score": 0.792,
+            "start": 9.521,
+            "endTime": "00:00:09,821",
+            "startTime": "00:00:09,521"
+          },
+          {
+            "end": 10.001,
+            "word": "tenho",
+            "index": 23,
+            "score": 0.899,
+            "start": 9.841,
+            "endTime": "00:00:10,001",
+            "startTime": "00:00:09,841"
+          },
+          {
+            "end": 10.962,
+            "word": "ciúme",
+            "index": 24,
+            "score": 0.365,
+            "start": 10.081,
+            "endTime": "00:00:10,962",
+            "startTime": "00:00:10,081"
+          }
+        ],
+        "length": 12,
+        "endTime": "00:00:10,962",
+        "startTime": "00:00:09,521"
+      },
+      {
+        "end": 12.124,
+        "start": 11.023,
+        "words": [
+          {
+            "end": 11.083,
+            "word": "do",
+            "index": 25,
+            "score": 0.676,
+            "start": 11.023,
+            "endTime": "00:00:11,083",
+            "startTime": "00:00:11,023"
+          },
+          {
+            "end": 11.183,
+            "word": "que",
+            "index": 26,
+            "score": 0.834,
+            "start": 11.103,
+            "endTime": "00:00:11,183",
+            "startTime": "00:00:11,103"
+          },
+          {
+            "end": 11.283,
+            "word": "eu",
+            "index": 27,
+            "score": 0.75,
+            "start": 11.223,
+            "endTime": "00:00:11,283",
+            "startTime": "00:00:11,223"
+          },
+          {
+            "end": 12.124,
+            "word": "valorizo",
+            "index": 28,
+            "score": 0.902,
+            "start": 11.323,
+            "endTime": "00:00:12,124",
+            "startTime": "00:00:11,323"
+          }
+        ],
+        "length": 15,
+        "endTime": "00:00:12,124",
+        "startTime": "00:00:11,023"
+      },
+      {
+        "end": 13.626,
+        "start": 12.504,
+        "words": [
+          {
+            "end": 12.564,
+            "word": "e",
+            "index": 29,
+            "score": 0.71,
+            "start": 12.504,
+            "endTime": "00:00:12,564",
+            "startTime": "00:00:12,504"
+          },
+          {
+            "end": 12.685,
+            "word": "eu",
+            "index": 30,
+            "score": 0.859,
+            "start": 12.604,
+            "endTime": "00:00:12,685",
+            "startTime": "00:00:12,604"
+          },
+          {
+            "end": 13.285,
+            "word": "quero",
+            "index": 31,
+            "score": 0.796,
+            "start": 12.865,
+            "endTime": "00:00:13,285",
+            "startTime": "00:00:12,865"
+          },
+          {
+            "end": 13.626,
+            "word": "aquilo",
+            "index": 32,
+            "score": 0.437,
+            "start": 13.325,
+            "endTime": "00:00:13,626",
+            "startTime": "00:00:13,325"
+          }
+        ],
+        "length": 14,
+        "endTime": "00:00:13,626",
+        "startTime": "00:00:12,504"
+      },
+      {
+        "end": 15.488,
+        "start": 13.666,
+        "words": [
+          {
+            "end": 13.746,
+            "word": "que",
+            "index": 33,
+            "score": 0.834,
+            "start": 13.666,
+            "endTime": "00:00:13,746",
+            "startTime": "00:00:13,666"
+          },
+          {
+            "end": 13.806,
+            "word": "eu",
+            "index": 34,
+            "score": 0.848,
+            "start": 13.766,
+            "endTime": "00:00:13,806",
+            "startTime": "00:00:13,766"
+          },
+          {
+            "end": 14.527,
+            "word": "valorizo,",
+            "index": 35,
+            "score": 0.781,
+            "start": 13.846,
+            "endTime": "00:00:14,527",
+            "startTime": "00:00:13,846"
+          },
+          {
+            "end": 15.488,
+            "word": "protegido",
+            "index": 36,
+            "score": 0.961,
+            "start": 14.687,
+            "endTime": "00:00:15,488",
+            "startTime": "00:00:14,687"
+          }
+        ],
+        "length": 22,
+        "endTime": "00:00:15,488",
+        "startTime": "00:00:13,666"
+      },
+      {
+        "end": 16.529,
+        "start": 15.628,
+        "words": [
+          {
+            "end": 16.129,
+            "word": "pertinho",
+            "index": 37,
+            "score": 0.859,
+            "start": 15.628,
+            "endTime": "00:00:16,129",
+            "startTime": "00:00:15,628"
+          },
+          {
+            "end": 16.268,
+            "word": "de",
+            "index": 38,
+            "score": 0.834,
+            "start": 16.169,
+            "endTime": "00:00:16,268",
+            "startTime": "00:00:16,169"
+          },
+          {
+            "end": 16.529,
+            "word": "mim.",
+            "index": 39,
+            "score": 0.91,
+            "start": 16.349,
+            "endTime": "00:00:16,529",
+            "startTime": "00:00:16,349"
+          }
+        ],
+        "endTime": "00:00:16,529",
+        "startTime": "00:00:15,628"
+      },
+      {
+        "end": 18.792,
+        "start": 17.691,
+        "words": [
+          {
+            "end": 17.771,
+            "word": "Então",
+            "index": 40,
+            "score": 0.79,
+            "start": 17.691,
+            "endTime": "00:00:17,771",
+            "startTime": "00:00:17,691"
+          },
+          {
+            "end": 17.931,
+            "word": "",
+            "index": 41,
+            "score": 0.583,
+            "start": 17.831,
+            "endTime": "00:00:17,931",
+            "startTime": "00:00:17,831"
+          },
+          {
+            "end": 18.271,
+            "word": "como",
+            "index": 42,
+            "score": 0.942,
+            "start": 17.991,
+            "endTime": "00:00:18,271",
+            "startTime": "00:00:17,991"
+          },
+          {
+            "end": 18.311,
+            "word": "o",
+            "index": 43,
+            "score": 0.037,
+            "start": 18.291,
+            "endTime": "00:00:18,311",
+            "startTime": "00:00:18,291"
+          },
+          {
+            "end": 18.792,
+            "word": "Luciano",
+            "index": 44,
+            "score": 0.666,
+            "start": 18.431,
+            "endTime": "00:00:18,792",
+            "startTime": "00:00:18,431"
+          }
+        ],
+        "endTime": "00:00:18,792",
+        "startTime": "00:00:17,691"
+      },
+      {
+        "end": 19.632,
+        "start": 18.852,
+        "words": [
+          {
+            "end": 19.152,
+            "word": "falou",
+            "index": 45,
+            "score": 0.853,
+            "start": 18.852,
+            "endTime": "00:00:19,152",
+            "startTime": "00:00:18,852"
+          },
+          {
+            "end": 19.212,
+            "word": "de",
+            "index": 46,
+            "score": 0.021,
+            "start": 19.172,
+            "endTime": "00:00:19,212",
+            "startTime": "00:00:19,172"
+          },
+          {
+            "end": 19.332,
+            "word": "uma",
+            "index": 47,
+            "score": 0.653,
+            "start": 19.232,
+            "endTime": "00:00:19,332",
+            "startTime": "00:00:19,232"
+          },
+          {
+            "end": 19.632,
+            "word": "forma",
+            "index": 48,
+            "score": 0.645,
+            "start": 19.412,
+            "endTime": "00:00:19,632",
+            "startTime": "00:00:19,412"
+          }
+        ],
+        "length": 15,
+        "endTime": "00:00:19,632",
+        "startTime": "00:00:18,852"
+      },
+      {
+        "end": 20.894,
+        "start": 19.672,
+        "words": [
+          {
+            "end": 20.473,
+            "word": "maravilhosa,",
+            "index": 49,
+            "score": 0.897,
+            "start": 19.672,
+            "endTime": "00:00:20,473",
+            "startTime": "00:00:19,672"
+          },
+          {
+            "end": 20.894,
+            "word": "a",
+            "index": 50,
+            "score": 0.996,
+            "start": 20.854,
+            "endTime": "00:00:20,894",
+            "startTime": "00:00:20,854"
+          }
+        ],
+        "length": 13,
+        "endTime": "00:00:20,894",
+        "startTime": "00:00:19,672"
+      },
+      {
+        "end": 22.335,
+        "start": 20.954,
+        "words": [
+          {
+            "end": 21.774,
+            "word": "diferença",
+            "index": 51,
+            "score": 0.946,
+            "start": 20.954,
+            "endTime": "00:00:21,774",
+            "startTime": "00:00:20,954"
+          },
+          {
+            "end": 22.335,
+            "word": "entre",
+            "index": 52,
+            "score": 0.836,
+            "start": 21.995,
+            "endTime": "00:00:22,335",
+            "startTime": "00:00:21,995"
+          }
+        ],
+        "length": 14,
+        "endTime": "00:00:22,335",
+        "startTime": "00:00:20,954"
+      },
+      {
+        "end": 23.476,
+        "start": 22.455,
+        "words": [
+          {
+            "end": 22.515,
+            "word": "o",
+            "index": 53,
+            "score": 0.631,
+            "start": 22.455,
+            "endTime": "00:00:22,515",
+            "startTime": "00:00:22,455"
+          },
+          {
+            "end": 23.196,
+            "word": "antídoto",
+            "index": 54,
+            "score": 0.938,
+            "start": 22.575,
+            "endTime": "00:00:23,196",
+            "startTime": "00:00:22,575"
+          },
+          {
+            "end": 23.396,
+            "word": "e",
+            "index": 55,
+            "score": 0.989,
+            "start": 23.336,
+            "endTime": "00:00:23,396",
+            "startTime": "00:00:23,336"
+          },
+          {
+            "end": 23.476,
+            "word": "o",
+            "index": 56,
+            "score": 0.581,
+            "start": 23.436,
+            "endTime": "00:00:23,476",
+            "startTime": "00:00:23,436"
+          }
+        ],
+        "length": 11,
+        "endTime": "00:00:23,476",
+        "startTime": "00:00:22,455"
+      },
+      {
+        "end": 25.638,
+        "start": 23.556,
+        "words": [
+          {
+            "end": 24.137,
+            "word": "veneno",
+            "index": 57,
+            "score": 0.924,
+            "start": 23.556,
+            "endTime": "00:00:24,137",
+            "startTime": "00:00:23,556"
+          },
+          {
+            "end": 24.497,
+            "word": "é",
+            "index": 58,
+            "score": 0.929,
+            "start": 24.437,
+            "endTime": "00:00:24,497",
+            "startTime": "00:00:24,437"
+          },
+          {
+            "end": 24.537,
+            "word": "a",
+            "index": 59,
+            "score": 0.996,
+            "start": 24.517,
+            "endTime": "00:00:24,537",
+            "startTime": "00:00:24,517"
+          },
+          {
+            "end": 25.638,
+            "word": "quantidade.",
+            "index": 60,
+            "score": 0.822,
+            "start": 24.637,
+            "endTime": "00:00:25,638",
+            "startTime": "00:00:24,637"
+          }
+        ],
+        "length": 19,
+        "endTime": "00:00:25,638",
+        "startTime": "00:00:23,556"
+      },
+      {
+        "end": 27.96,
+        "start": 26.098,
+        "words": [
+          {
+            "end": 26.379,
+            "word": "Então,",
+            "index": 61,
+            "score": 0.812,
+            "start": 26.098,
+            "endTime": "00:00:26,379",
+            "startTime": "00:00:26,098"
+          },
+          {
+            "end": 26.519,
+            "word": "o",
+            "index": 62,
+            "score": 0.96,
+            "start": 26.479,
+            "endTime": "00:00:26,519",
+            "startTime": "00:00:26,479"
+          },
+          {
+            "end": 26.899,
+            "word": "ciúme",
+            "index": 63,
+            "score": 0.602,
+            "start": 26.619,
+            "endTime": "00:00:26,899",
+            "startTime": "00:00:26,619"
+          },
+          {
+            "end": 27.96,
+            "word": "demais",
+            "index": 64,
+            "score": 0.882,
+            "start": 26.959,
+            "endTime": "00:00:27,960",
+            "startTime": "00:00:26,959"
+          }
+        ],
+        "length": 18,
+        "endTime": "00:00:27,960",
+        "startTime": "00:00:26,098"
+      },
+      {
+        "end": 29.322,
+        "start": 28.04,
+        "words": [
+          {
+            "end": 28.281,
+            "word": "pode",
+            "index": 65,
+            "score": 0.907,
+            "start": 28.04,
+            "endTime": "00:00:28,281",
+            "startTime": "00:00:28,040"
+          },
+          {
+            "end": 28.861,
+            "word": "entrar",
+            "index": 66,
+            "score": 0.868,
+            "start": 28.341,
+            "endTime": "00:00:28,861",
+            "startTime": "00:00:28,341"
+          },
+          {
+            "end": 29.322,
+            "word": "num",
+            "index": 67,
+            "score": 0.636,
+            "start": 29.161,
+            "endTime": "00:00:29,322",
+            "startTime": "00:00:29,161"
+          }
+        ],
+        "length": 13,
+        "endTime": "00:00:29,322",
+        "startTime": "00:00:28,040"
+      },
+      {
+        "end": 30.523,
+        "start": 29.442,
+        "words": [
+          {
+            "end": 29.982,
+            "word": "ramo",
+            "index": 68,
+            "score": 0.785,
+            "start": 29.442,
+            "endTime": "00:00:29,982",
+            "startTime": "00:00:29,442"
+          },
+          {
+            "end": 30.182,
+            "word": "lá",
+            "index": 69,
+            "score": 0.827,
+            "start": 30.022,
+            "endTime": "00:00:30,182",
+            "startTime": "00:00:30,022"
+          },
+          {
+            "end": 30.322,
+            "word": "que",
+            "index": 70,
+            "score": 0.772,
+            "start": 30.222,
+            "endTime": "00:00:30,322",
+            "startTime": "00:00:30,222"
+          },
+          {
+            "end": 30.523,
+            "word": "vai",
+            "index": 71,
+            "score": 0.665,
+            "start": 30.383,
+            "endTime": "00:00:30,523",
+            "startTime": "00:00:30,383"
+          }
+        ],
+        "length": 12,
+        "endTime": "00:00:30,523",
+        "startTime": "00:00:29,442"
+      },
+      {
+        "end": 31.824,
+        "start": 30.583,
+        "words": [
+          {
+            "end": 30.683,
+            "word": "te",
+            "index": 72,
+            "score": 0.812,
+            "start": 30.583,
+            "endTime": "00:00:30,683",
+            "startTime": "00:00:30,583"
+          },
+          {
+            "end": 31.243,
+            "word": "fazer",
+            "index": 73,
+            "score": 0.861,
+            "start": 30.783,
+            "endTime": "00:00:31,243",
+            "startTime": "00:00:30,783"
+          },
+          {
+            "end": 31.464,
+            "word": "um",
+            "index": 74,
+            "score": 0.914,
+            "start": 31.383,
+            "endTime": "00:00:31,464",
+            "startTime": "00:00:31,383"
+          },
+          {
+            "end": 31.824,
+            "word": "mal",
+            "index": 75,
+            "score": 0.914,
+            "start": 31.544,
+            "endTime": "00:00:31,824",
+            "startTime": "00:00:31,544"
+          }
+        ],
+        "length": 12,
+        "endTime": "00:00:31,824",
+        "startTime": "00:00:30,583"
+      },
+      {
+        "end": 32.585,
+        "start": 31.924,
+        "words": [
+          {
+            "end": 32.585,
+            "word": "danado.",
+            "index": 76,
+            "score": 0.953,
+            "start": 31.924,
+            "endTime": "00:00:32,585",
+            "startTime": "00:00:31,924"
+          }
+        ],
+        "endTime": "00:00:32,585",
+        "startTime": "00:00:31,924"
+      },
+      {
+        "end": 34.526,
+        "start": 33.225,
+        "words": [
+          {
+            "end": 33.285,
+            "word": "E",
+            "index": 77,
+            "score": 0.674,
+            "start": 33.225,
+            "endTime": "00:00:33,285",
+            "startTime": "00:00:33,225"
+          },
+          {
+            "end": 33.525,
+            "word": "ele",
+            "index": 78,
+            "score": 0.89,
+            "start": 33.345,
+            "endTime": "00:00:33,525",
+            "startTime": "00:00:33,345"
+          },
+          {
+            "end": 34.526,
+            "word": "geralmente",
+            "index": 79,
+            "score": 0.942,
+            "start": 33.626,
+            "endTime": "00:00:34,526",
+            "startTime": "00:00:33,626"
+          }
+        ],
+        "endTime": "00:00:34,526",
+        "startTime": "00:00:33,225"
+      },
+      {
+        "end": 36.608,
+        "start": 34.767,
+        "words": [
+          {
+            "end": 35.507,
+            "word": "traduz",
+            "index": 80,
+            "score": 0.791,
+            "start": 34.767,
+            "endTime": "00:00:35,507",
+            "startTime": "00:00:34,767"
+          },
+          {
+            "end": 35.647,
+            "word": "uma",
+            "index": 81,
+            "score": 0.233,
+            "start": 35.587,
+            "endTime": "00:00:35,647",
+            "startTime": "00:00:35,587"
+          },
+          {
+            "end": 36.608,
+            "word": "autoestima",
+            "index": 82,
+            "score": 0.893,
+            "start": 35.728,
+            "endTime": "00:00:36,608",
+            "startTime": "00:00:35,728"
+          }
+        ],
+        "length": 19,
+        "endTime": "00:00:36,608",
+        "startTime": "00:00:34,767"
+      },
+      {
+        "end": 38.59,
+        "start": 36.769,
+        "words": [
+          {
+            "end": 37.589,
+            "word": "afetada,",
+            "index": 83,
+            "score": 0.952,
+            "start": 36.769,
+            "endTime": "00:00:37,589",
+            "startTime": "00:00:36,769"
+          },
+          {
+            "end": 38.59,
+            "word": "traduz",
+            "index": 84,
+            "score": 0.844,
+            "start": 38.07,
+            "endTime": "00:00:38,590",
+            "startTime": "00:00:38,070"
+          }
+        ],
+        "length": 14,
+        "endTime": "00:00:38,590",
+        "startTime": "00:00:36,769"
+      },
+      {
+        "end": 40.352,
+        "start": 38.65,
+        "words": [
+          {
+            "end": 39.371,
+            "word": "uma",
+            "index": 85,
+            "score": 0.829,
+            "start": 38.65,
+            "endTime": "00:00:39,371",
+            "startTime": "00:00:38,650"
+          },
+          {
+            "end": 40.352,
+            "word": "insatisfação",
+            "index": 86,
+            "score": 0.959,
+            "start": 39.431,
+            "endTime": "00:00:40,352",
+            "startTime": "00:00:39,431"
+          }
+        ],
+        "length": 15,
+        "endTime": "00:00:40,352",
+        "startTime": "00:00:38,650"
+      },
+      {
+        "end": 41.113,
+        "start": 40.432,
+        "words": [
+          {
+            "end": 41.113,
+            "word": "consigo.",
+            "index": 87,
+            "score": 0.999,
+            "start": 40.432,
+            "endTime": "00:00:41,113",
+            "startTime": "00:00:40,432"
+          }
+        ],
+        "endTime": "00:00:41,113",
+        "startTime": "00:00:40,432"
+      },
+      {
+        "end": 43.356,
+        "start": 41.914,
+        "words": [
+          {
+            "end": 42.074,
+            "word": "Uma",
+            "index": 88,
+            "score": 0.891,
+            "start": 41.914,
+            "endTime": "00:00:42,074",
+            "startTime": "00:00:41,914"
+          },
+          {
+            "end": 43.156,
+            "word": "frustração",
+            "index": 89,
+            "score": 0.853,
+            "start": 42.194,
+            "endTime": "00:00:43,156",
+            "startTime": "00:00:42,194"
+          },
+          {
+            "end": 43.356,
+            "word": "por",
+            "index": 90,
+            "score": 0.66,
+            "start": 43.256,
+            "endTime": "00:00:43,356",
+            "startTime": "00:00:43,256"
+          }
+        ],
+        "endTime": "00:00:43,356",
+        "startTime": "00:00:41,914"
+      },
+      {
+        "end": 44.599,
+        "start": 43.457,
+        "words": [
+          {
+            "end": 43.617,
+            "word": "não",
+            "index": 91,
+            "score": 0.721,
+            "start": 43.457,
+            "endTime": "00:00:43,617",
+            "startTime": "00:00:43,457"
+          },
+          {
+            "end": 43.877,
+            "word": "ter",
+            "index": 92,
+            "score": 0.857,
+            "start": 43.717,
+            "endTime": "00:00:43,877",
+            "startTime": "00:00:43,717"
+          },
+          {
+            "end": 44.599,
+            "word": "controle,",
+            "index": 93,
+            "score": 0.879,
+            "start": 43.958,
+            "endTime": "00:00:44,599",
+            "startTime": "00:00:43,958"
+          }
+        ],
+        "length": 15,
+        "endTime": "00:00:44,599",
+        "startTime": "00:00:43,457"
+      },
+      {
+        "end": 45.961,
+        "start": 44.639,
+        "words": [
+          {
+            "end": 44.839,
+            "word": "porque",
+            "index": 94,
+            "score": 0.946,
+            "start": 44.639,
+            "endTime": "00:00:44,839",
+            "startTime": "00:00:44,639"
+          },
+          {
+            "end": 44.899,
+            "word": "o",
+            "index": 95,
+            "score": 0.116,
+            "start": 44.859,
+            "endTime": "00:00:44,899",
+            "startTime": "00:00:44,859"
+          },
+          {
+            "end": 45.26,
+            "word": "ciúme",
+            "index": 96,
+            "score": 0.536,
+            "start": 44.98,
+            "endTime": "00:00:45,260",
+            "startTime": "00:00:44,980"
+          },
+          {
+            "end": 45.961,
+            "word": "também",
+            "index": 97,
+            "score": 0.905,
+            "start": 45.561,
+            "endTime": "00:00:45,961",
+            "startTime": "00:00:45,561"
+          }
+        ],
+        "length": 18,
+        "endTime": "00:00:45,961",
+        "startTime": "00:00:44,639"
+      },
+      {
+        "end": 47.364,
+        "start": 46.102,
+        "words": [
+          {
+            "end": 46.362,
+            "word": "fala",
+            "index": 98,
+            "score": 0.915,
+            "start": 46.102,
+            "endTime": "00:00:46,362",
+            "startTime": "00:00:46,102"
+          },
+          {
+            "end": 46.683,
+            "word": "sobre",
+            "index": 99,
+            "score": 0.96,
+            "start": 46.462,
+            "endTime": "00:00:46,683",
+            "startTime": "00:00:46,462"
+          },
+          {
+            "end": 47.364,
+            "word": "controle,",
+            "index": 100,
+            "score": 0.938,
+            "start": 46.763,
+            "endTime": "00:00:47,364",
+            "startTime": "00:00:46,763"
+          }
+        ],
+        "length": 18,
+        "endTime": "00:00:47,364",
+        "startTime": "00:00:46,102"
+      },
+      {
+        "end": 48.426,
+        "start": 47.404,
+        "words": [
+          {
+            "end": 47.584,
+            "word": "sobre",
+            "index": 101,
+            "score": 0.905,
+            "start": 47.404,
+            "endTime": "00:00:47,584",
+            "startTime": "00:00:47,404"
+          },
+          {
+            "end": 47.624,
+            "word": "a",
+            "index": 102,
+            "score": 0.001,
+            "start": 47.604,
+            "endTime": "00:00:47,624",
+            "startTime": "00:00:47,604"
+          },
+          {
+            "end": 48.286,
+            "word": "necessidade",
+            "index": 103,
+            "score": 0.764,
+            "start": 47.644,
+            "endTime": "00:00:48,286",
+            "startTime": "00:00:47,644"
+          },
+          {
+            "end": 48.426,
+            "word": "de",
+            "index": 104,
+            "score": 0.834,
+            "start": 48.326,
+            "endTime": "00:00:48,426",
+            "startTime": "00:00:48,326"
+          }
+        ],
+        "length": 19,
+        "endTime": "00:00:48,426",
+        "startTime": "00:00:47,404"
+      },
+      {
+        "end": 49.929,
+        "start": 48.706,
+        "words": [
+          {
+            "end": 49.308,
+            "word": "controlar",
+            "index": 105,
+            "score": 0.999,
+            "start": 48.706,
+            "endTime": "00:00:49,308",
+            "startTime": "00:00:48,706"
+          },
+          {
+            "end": 49.448,
+            "word": "o",
+            "index": 106,
+            "score": 0.441,
+            "start": 49.348,
+            "endTime": "00:00:49,448",
+            "startTime": "00:00:49,348"
+          },
+          {
+            "end": 49.929,
+            "word": "outro,",
+            "index": 107,
+            "score": 0.783,
+            "start": 49.588,
+            "endTime": "00:00:49,929",
+            "startTime": "00:00:49,588"
+          }
+        ],
+        "length": 16,
+        "endTime": "00:00:49,929",
+        "startTime": "00:00:48,706"
+      },
+      {
+        "end": 51.171,
+        "start": 49.969,
+        "words": [
+          {
+            "end": 50.069,
+            "word": "de",
+            "index": 108,
+            "score": 0.81,
+            "start": 49.969,
+            "endTime": "00:00:50,069",
+            "startTime": "00:00:49,969"
+          },
+          {
+            "end": 50.35,
+            "word": "ter",
+            "index": 109,
+            "score": 0.923,
+            "start": 50.189,
+            "endTime": "00:00:50,350",
+            "startTime": "00:00:50,189"
+          },
+          {
+            "end": 50.911,
+            "word": "domínio",
+            "index": 110,
+            "score": 0.811,
+            "start": 50.41,
+            "endTime": "00:00:50,911",
+            "startTime": "00:00:50,410"
+          },
+          {
+            "end": 51.171,
+            "word": "sobre",
+            "index": 111,
+            "score": 0.803,
+            "start": 50.951,
+            "endTime": "00:00:51,171",
+            "startTime": "00:00:50,951"
+          }
+        ],
+        "length": 17,
+        "endTime": "00:00:51,171",
+        "startTime": "00:00:49,969"
+      },
+      {
+        "start": 51.191,
+        "words": [
+          {
+            "end": 51.251,
+            "word": "a",
+            "index": 112,
+            "score": 0.355,
+            "start": 51.191,
+            "endTime": "00:00:51,251",
+            "startTime": "00:00:51,191"
+          },
+          {
+            "end": 51.852,
+            "word": "situação.",
+            "index": 113,
+            "score": 0.998,
+            "start": 51.291,
+            "endTime": "00:00:51,852",
+            "startTime": "00:00:51,291"
+          }
+        ],
+        "length": 10,
+        "endTime": "00:00:51,852",
+        "startTime": "00:00:51,191"
+      }
+    ],
+    }
+
+      const subtitle = new VideomatikEditor.Subtitle("#subtitle", {
+        __editorURL: 'https://videomatik-editor-git-subtitle-embed-kassellabs.vercel.app',
+        video: 'https://storage.videomatik.com.br/videomatik-sheet/54e51069013.mp4',
+        subtitles: savedSubtitles,
+      })
+
+      subtitle.on('ready', ( subtitles ) => {
+        console.log('The player was successfully mounted and finished loading')
+      })
+
+      subtitle.on('change', ( subtitles ) => {
+        console.log('User has changed the subtitles to:', subtitles)
+        savedSubtitles = subtitles
+      })
+    </script>
+  </body>
+</html>
