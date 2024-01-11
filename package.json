@@ -1,6 +1,6 @@
 {
   "name": "@videomatik/editor",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "Videomatik Editor as an Embeddable component",
   "main": "dist/editor.js",
   "scripts": {

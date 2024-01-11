@@ -7,6 +7,7 @@ class VideomatikCropper {
       __editorURL = 'https://editor.videomatik.com.br',
       video,
       crops,
+      aspectRatio,
     } = options;
     const container = getContainer(containerSelectorOrElement);
     const iframe = document.createElement('iframe');
@@ -18,6 +19,7 @@ class VideomatikCropper {
 
     const urlParams = new URLSearchParams({
       video,
+      aspectRatio,
     });
     iframe.setAttribute('src', `${__editorURL}/cropper/embed?${urlParams.toString()}`);
 
@@ -27,6 +29,7 @@ class VideomatikCropper {
     this.iframe = iframe;
     this.video = video;
     this.crops = crops;
+    this.aspectRatio = aspectRatio;
 
     this.eventEmitter = new EventEmitter();
 
