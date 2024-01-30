@@ -7,6 +7,7 @@ class VideomatikClipper {
       __editorURL = 'https://editor.videomatik.com.br',
       video,
       clips,
+      colorPrimary,
     } = options;
     const container = getContainer(containerSelectorOrElement);
     const iframe = document.createElement('iframe');
@@ -19,6 +20,7 @@ class VideomatikClipper {
     const urlParams = new URLSearchParams({
       video,
       clips: JSON.stringify(clips),
+      colorPrimary,
     });
     iframe.setAttribute('src', `${__editorURL}/clipper/embed?${urlParams.toString()}`);
 

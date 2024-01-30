@@ -25,30 +25,19 @@
   <body>
     <div class="clipper-container">
       <div id="clipper" style="height: 70vh; width: 100%"></div>
-      <button type="button" onclick="console.log(savedClips)">
-        Export
-      </button>
     </div>
     <script src="/dist/editor.js"></script>
     <script>
-      let savedClips = [
-        {start: 0, end: 60, selected: true},
-      ]
 
       const clipper = new VideomatikEditor.Clipper("#clipper", {
-        // __editorURL: 'http://localhost:3000',
+        __editorURL: 'http://localhost:3000',
+        colorPrimary: '#00A884',
         video: 'https://storage.videomatik.com.br/videomatik-sheet/26601f59e3a.mp4',
-        clips: savedClips,
-      })
+        clips: [
+          {start: 0, end: 60, selected: true},
+        ],
+      })   
 
-      clipper.on('ready', () => {
-        console.log('The player was successfully mounted and finished loading')
-      })
-
-      clipper.on('change', ({ clips }) => {
-        console.log('User has changed the clips to:', clips)
-        savedClips = clips
-      })
     </script>
   </body>
 </html>
