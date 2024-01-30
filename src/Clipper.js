@@ -20,8 +20,12 @@ class VideomatikClipper {
     const urlParams = new URLSearchParams({
       video,
       clips: JSON.stringify(clips),
-      colorPrimary,
     });
+
+    if (colorPrimary) {
+      urlParams.set('colorPrimary', colorPrimary);
+    }
+
     iframe.setAttribute('src', `${__editorURL}/clipper/embed?${urlParams.toString()}`);
 
     container.appendChild(iframe);
